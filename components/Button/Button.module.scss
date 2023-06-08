@@ -1,0 +1,22 @@
+.button {
+  display: flex;
+  align-items: center;
+  
+  button {
+    width: 100%;
+    font-family: inherit;
+    font-size: 20px;
+    background: transparent;
+    color: #a4a2a2;
+    padding: 0.7em 1em;
+    padding-left: 0.9em;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: all 0.2s;
+    cursor: pointer;
+    gap: 10px;
+  }
+}
