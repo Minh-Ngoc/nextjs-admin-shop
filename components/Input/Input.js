@@ -4,11 +4,12 @@ import styles from './Input.module.scss';
 
 const cx = classNames.bind(styles);
 
-const Input = ({ className, text = 'text', name, value, placeholder, label, classLabel, svg, ...props}) => {
+const Input = ({ className, classIp, text = 'text', name, value, placeholder, label, classLabel, svg, ...props}) => {
     return (
         <Wrapper className={cx(className, 'input__group')}>
             <input 
                 required="" 
+                className={classIp}
                 type={text} 
                 name={name} 
                 value={value} 

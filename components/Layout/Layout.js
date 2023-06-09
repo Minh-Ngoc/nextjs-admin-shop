@@ -9,11 +9,13 @@ const cx = classNames.bind(styles);
 const Layout = ({ children }) => {
     return (
         <Wrapper className={cx('layout')}>
-            <div className={cx('layout__container')}>
-                <Sidebar />
-                <div>
-                    <Header />
-                    {children}
+            <div className={'grid wide ' + cx('layout__container')}>
+                <div className='row'>
+                    <Sidebar />
+                    <div className='col l-9'>
+                        <Header />
+                        {children}
+                    </div>
                 </div>
             </div>
         </Wrapper>

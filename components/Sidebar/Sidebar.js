@@ -5,7 +5,7 @@ import Images from "../Images";
 import Button from "../Button";
 import {
     Dashboard, Products, Customers, Orders, Shipments, Transactions, Settings, Logout,
-} from '../Icons';
+} from '../ImagesList';
 import { useState } from "react";
 
 const cx = classNames.bind(styles);
@@ -48,7 +48,7 @@ const Sidebar = ({ props }) => {
     ]
 
     return (
-        <Wrapper className={cx('sidebar')}>
+        <Wrapper className={'col l-3 ' + cx('sidebar')}>
             <Images className={cx('sidebar__logo')} content='Lisa Admin' />
             <div className={cx('sidebar__container')}>
                 {

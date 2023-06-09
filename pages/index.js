@@ -1,12 +1,18 @@
 import Head from 'next/head';
+import ColumnCharts from '@/components/ColumnCharts';
 
-export default function Home() {
+const Home = () => {
+  
   return (
     <>
     <Head>
       <title>Home Page</title>
     </Head>
-    <main>Home page</main>
+    <main>
+      <ColumnCharts />
+    </main>
     </>
-  )
+  )   
 }
+
+export default Home;

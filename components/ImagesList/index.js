@@ -9,6 +9,8 @@ import Logout from '@/assets/images/logout.svg';
 import SearchIcon from '@/assets/images/search.svg';
 import NotificationIcon from '@/assets/images/notification.svg';
 import MenuIcon from '@/assets/images/menu.svg';
+import UserImage from '@/assets/images/user.png';
+import MoreIcon from '@/assets/images/more-icon.svg';
 
 export {
     Dashboard,
@@ -22,4 +24,6 @@ export {
     SearchIcon,
     NotificationIcon,
     MenuIcon,
+    UserImage,
+    MoreIcon,
 }

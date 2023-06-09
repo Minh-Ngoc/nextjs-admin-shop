@@ -4,8 +4,9 @@
     font-family: Arial, Helvetica, sans-serif;
 
     .layout__container {
-        display: flex;
         background: #F3F3F3;
         border-radius: 50px;
+        max-width: 96% !important;
+        padding-right: 2rem;
     }
 }

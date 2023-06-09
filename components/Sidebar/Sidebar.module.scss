@@ -5,13 +5,13 @@
     .sidebar__logo {
         font-weight: 600;
         font-size: 34px;
-        justify-content: center;
+        margin: 0 calc(3rem + 0.9rem);
         line-height: 40px;
         color: #1E2832;
     }
 
     .sidebar__container {
-        margin: 5rem 0;
+        margin: 5rem 3rem;
         .btn {
             + .btn {
                 margin-top: 1rem;

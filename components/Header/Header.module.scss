@@ -1,3 +1,53 @@
 .header {
     padding: 3rem 0;
+
+    .header__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h1 {
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 47px;
+            color: #535353;
+        }
+        .header__search {
+            input label {
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 21px;
+                color: #7B7878;
+            }
+        }
+        .header__icons {
+            display: flex;
+            gap: 2rem;
+            margin-right: 1rem;
+
+            .header__icon-item:hover {
+                cursor: pointer;
+
+                svg {
+                    path {
+                        fill: var(--active);
+                    }
+                }
+            }
+
+            .notificationIcon {
+                position: relative;
+            }
+            .notificationIcon:after {
+                position: absolute;
+                content: '';
+                width: 6px;
+                height: 6px;
+                top: 32%;
+                right: 8%;
+                background: #202852;
+                border-radius: 50%;
+            }
+        }
+    }
 }

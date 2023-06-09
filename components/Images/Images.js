@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const cx = classNames.bind(styles);
 
-const Images = ({ src, alt, width, height, className, Svg, content }) => {
+const Images = ({ src, alt, width, height, className, svg, content }) => {
     return (
         <Wrapper className={cx(className, 'images')}>
             {
@@ -16,7 +16,7 @@ const Images = ({ src, alt, width, height, className, Svg, content }) => {
                         width={width}
                         height={height}
                     />
-                ) : Svg
+                ) : svg
             }
             { content && ( <span> {content} </span> ) }
 
