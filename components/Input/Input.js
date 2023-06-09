@@ -14,7 +14,6 @@ const Input = ({ className, classIp, text = 'text', name, value, placeholder, la
                 name={name} 
                 value={value} 
                 placeholder={placeholder} 
-                autocomplete="off" 
                 {...props} 
             />
             { svg }

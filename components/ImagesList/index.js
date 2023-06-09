@@ -11,6 +11,7 @@ import NotificationIcon from '@/assets/images/notification.svg';
 import MenuIcon from '@/assets/images/menu.svg';
 import UserImage from '@/assets/images/user.png';
 import MoreIcon from '@/assets/images/more-icon.svg';
+import ListIcon from '@/assets/images/list-icon.svg';
 
 export {
     Dashboard,
@@ -26,4 +27,5 @@ export {
     MenuIcon,
     UserImage,
     MoreIcon,
+    ListIcon,
 }

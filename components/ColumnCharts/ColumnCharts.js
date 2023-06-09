@@ -84,41 +84,36 @@ const ColumnCharts = () => {
     }, [])
 
     return (
-        <Wrapper className='row'>
-            <div className={'col l-9 ' + cx('chart')}>
-                <div className={cx('chart__header')}>
-                    <div className={cx('chart__title')}>
-                        <h3>Total Revenue</h3>
-                        <h2> {USDollar.format(state.totalPrice)} </h2>
-                    </div>
-                    <div className={cx('chart__selected')}>
-                        <Button 
-                            className={cx('chart__selected-btn')}
-                            content='This Year'
-                            svg={<MoreIcon />}
-                        />
-                    </div>
+        <div className={'col l-9 ' + cx('column__chart')}>
+            <div className={cx('column__chart__header')}>
+                <div className={cx('column__chart__title')}>
+                    <h3>Total Revenue</h3>
+                    <h2> {USDollar.format(state.totalPrice)} </h2>
                 </div>
-                <div className={cx('chart__container')}>
-                    {
-                        state.month?.map(month => (
-                            <div className={cx('chart__item')}>
-                                <div className={cx('chart__item__group')}>
-                                    { month.total !== 0 ? <div style={{ height: month.total * 4 }} className={cx('chart__item__col-1')}></div> : '' }
-                                    { month.quantity !== 0 ? <div style={{ height: month.quantity * 4 }} className={cx('chart__item__col-2')}></div> : '' }
-                                </div>
-                                <div className={cx('chart__item__label')}>
-                                    { month.name }
-                                </div>
+                <div className={cx('column__chart__selected')}>
+                    <Button 
+                        className={cx('column__chart__selected-btn')}
+                        content='This Year'
+                        svg={<MoreIcon />}
+                    />
+                </div>
+            </div>
+            <div className={cx('column__chart__container')}>
+                {
+                    state.month?.map(month => (
+                        <div className={cx('column__chart__item')}>
+                            <div className={cx('column__chart__item__group')}>
+                                { month.total !== 0 ? <div style={{ height: month.total * 4 }} className={cx('column__chart__item__col-1')}></div> : '' }
+                                { month.quantity !== 0 ? <div style={{ height: month.quantity * 4 }} className={cx('column__chart__item__col-2')}></div> : '' }
                             </div>
-                        ))
-                    }
-                </div>
+                            <div className={cx('column__chart__item__label')}>
+                                { month.name }
+                            </div>
+                        </div>
+                    ))
+                }
             </div>
-            <div className='col l-3'>
-                right
-            </div>
-        </Wrapper>
+        </div>
     )
 }
 

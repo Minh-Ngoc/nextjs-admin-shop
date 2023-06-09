@@ -3,86 +3,65 @@ import Wrapper from "../Wrapper";
 import classNames from 'classnames/bind';
 import styles from './RadialCharts.module.scss';
 import Button from '../Button';
-import { MoreIcon } from '../ImagesList';
+import { ListIcon } from '../ImagesList';
 
 const cx = classNames.bind(styles);
 
 const ColumnCharts = () => {
     const [state, setState] = useState({});
 
-
-
     useEffect(() => {
         setState({
             month: [
                 {
-                    name: 'Jan',
-                    total: 0,                   
-                    quantity: 30,
+                    name: 'Current Customers',
+                    total: 85,                   
                 },
                 {
-                    name: 'Feb',
-                    total: 40,
-                    quantity: 50,
+                    name: 'New Customers',
+                    total: 66,
                 },
                 {
-                    name: 'Mar',
-                    total: 40,
-                    quantity: 50,
+                    name: 'Target Customers',
+                    total: 90,
                 },
                 {
-                    name: 'Apr',
-                    total: 60,
-                    quantity: 70,
-                },
-                {
-                    name: 'May',
+                    name: 'Retarget Customers',
                     total: 30,
-                    quantity: 40,
-                },
-                {
-                    name: 'Jun',
-                    total: 80,
-                    quantity: 90,
-                },
-                {
-                    name: 'Jul',
-                    total: 45,
-                    quantity: 55,
-                },
-                {
-                    name: 'Aug',
-                    total: 35,
-                    quantity: 45,
-                },
-                {
-                    name: 'Sep',
-                    total: 25,
-                    quantity: 35,
-                },
-                {
-                    name: 'Oct',
-                    total: 35,
-                    quantity: 50,
-                },
-                {
-                    name: 'Nov',
-                    total: 20,
-                    quantity: 30,
-                },
-                {
-                    name: 'Dec',
-                    total: 10,
-                    quantity: 20,
                 },
             ],
-            totalPrice: 980273,
         });
     }, [])
 
     return (
-        <Wrapper className='row'>
-            
+        <Wrapper className={'col l-3 ' + cx('radial__charts')}>
+            <div className={cx('radial__charts__header')}>
+                <div className={cx('radial__charts__title')}>
+                    <h2>Customers</h2>
+                    <p>Information About your Customers</p>
+                </div>
+                <div className={cx('radial__charts__selected')}>
+                    <Button 
+                        className={cx('radial__charts__selected-btn')}
+                        svg={<ListIcon />}
+                    />
+                </div>
+            </div>
+            <div className={cx('radial__charts__container')}>
+                {
+                    state.month?.map(month => (
+                        <div className={cx('radial__charts__item')}>
+                            <div className={cx('radial__charts__item__group')}>
+                                { month.total !== 0 ? <div style={{ height: month.total * 4 }} className={cx('radial__charts__item__col-1')}></div> : '' }
+                                { month.quantity !== 0 ? <div style={{ height: month.quantity * 4 }} className={cx('radial__charts__item__col-2')}></div> : '' }
+                            </div>
+                            <div className={cx('radial__charts__item__label')}>
+                                { month.name }
+                            </div>
+                        </div>
+                    ))
+                }
+            </div>
         </Wrapper>
     )
 }
