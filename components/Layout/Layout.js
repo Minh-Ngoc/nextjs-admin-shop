@@ -12,7 +12,7 @@ const Layout = ({ children }) => {
             <div className={'grid wide ' + cx('layout__container')}>
                 <div className='row'>
                     <Sidebar />
-                    <div className='col l-9'>
+                    <div className={'col l-9 l-o-3 ' + cx('layout__main')}>
                         <Header />
                         {children}
                     </div>

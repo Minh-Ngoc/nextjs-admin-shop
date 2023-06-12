@@ -12,6 +12,12 @@ import MenuIcon from '@/assets/images/menu.svg';
 import UserImage from '@/assets/images/user.png';
 import MoreIcon from '@/assets/images/more-icon.svg';
 import ListIcon from '@/assets/images/list-icon.svg';
+import TotalVisits from '@/assets/images/total-visits.svg';
+import TotalSales from '@/assets/images/total-sales.svg';
+import TotalMade from '@/assets/images/total-made.svg';
+import OrdersCompleted from '@/assets/images/orders-completed.svg';
+import TopProduct1 from '@/assets/images/product1.png';
+import TopProduct2 from '@/assets/images/product2.png';
 
 export {
     Dashboard,
@@ -28,4 +34,10 @@ export {
     UserImage,
     MoreIcon,
     ListIcon,
+    TotalVisits,
+    TotalSales,
+    TotalMade,
+    OrdersCompleted,
+    TopProduct1,
+    TopProduct2,
 }

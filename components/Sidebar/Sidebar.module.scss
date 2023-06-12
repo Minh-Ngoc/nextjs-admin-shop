@@ -1,27 +1,32 @@
 .sidebar {
-    padding: 3rem 6rem 3rem 3rem;
+    width: 22%;
     height: 100vh;   
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
     
     .sidebar__logo {
         font-weight: 600;
         font-size: 34px;
-        margin: 0 calc(3rem + 0.9rem);
+        margin: 2rem calc(2rem + 0.9rem);
         line-height: 40px;
         color: #1E2832;
     }
 
     .sidebar__container {
-        margin: 5rem 3rem;
+        margin: 0 2rem 2rem 2rem;
         .btn {
             + .btn {
-                margin-top: 1rem;
+                margin-top: 10px;
             }
         }
         .btn {
             button span {
                 display: block;
-                font-weight: 600;
-                font-size: 24px;
+                font-weight: 500;
+                font-size: 20px;
                 line-height: 28px;
                 margin-left: 0.3em;
                 transition: all 0.6s ease-in-out;
@@ -78,6 +83,7 @@
                 }
                 span {
                     color: var(--active);
+                    font-weight: 600;
                 }
             }
         }

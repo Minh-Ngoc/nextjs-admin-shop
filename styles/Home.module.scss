@@ -1,15 +1,37 @@
-.radial__chart {
-    background-color: #FFF;
+.main {
+    margin-bottom: 2rem;
+}
+.container {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+
+    + .container {
+        margin-top: 2rem;
+    }
+}
+.products__overview {
+    width: calc(70% - 10px);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding: 1rem;
+}
+.cards {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+.stats__overview {
+    width: 30%;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
     padding: 1rem 10px;
-    max-width: 30%;
 
-    .radial__chart__header {
+    .stats__overview__header {
         display: flex;
         justify-content: space-between;
 
-        .radial__chart__title{
+        .stats__overview__title{
     
             h2 {
                 font-weight: 700;
@@ -25,8 +47,8 @@
             }
         }
     
-        .radial__chart__selected {
-            .radial__chart__selected-btn {
+        .stats__overview__selected {
+            .stats__overview__selected-btn {
                 button {
                     display: flex;
                     flex-direction: row-reverse;
@@ -43,33 +65,10 @@
             }
         }
     }
-
-    .radial__chart__container {
+    .stats__overview__container {
         display: flex;
-        align-items: flex-end;
-        flex-wrap: wrap;
-        gap: 10px;
-
-        .radial__chart__item {
-            margin: 1rem 0;
-            flex: 1 1 calc(100% / 2 - 10px);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-
-            .radial__chart__item__group {
-                display: flex;
-                align-items: flex-end;
-            }
-        }
-        
-        .radial__chart__item__label{
-            margin-top: 1.2rem;
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 23px;
-            color: #A7A7A7;
-        }
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem 0;
     }
 }

@@ -1,5 +1,7 @@
 .input__group {
     position: relative;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-radius: 10px;
 
     > input {
         border: none;
@@ -37,15 +39,13 @@
         color: transparent;
     }
 
-
-
     input:focus {
         outline: none;
         opacity: 1;
         padding-bottom: 6px;
         font-weight: 700;
         border-width: 3px;
-        border-bottom: 2px solid #116399;
+        border-bottom: 3px solid #116399;
         border-image: linear-gradient(to right, #116399, #38caef);
         border-image-slice: 1;
     }
@@ -53,9 +53,12 @@
     input:focus ~ label {
         transform: translateY(-50%) scale(0.8);
         font-size: 18px;
-        background-color: #ffffff;
+        background-color: transparent;
         padding: 0 .2em;
         color: #1a73e8;
     }
 }
-   
+.input__group:has(input:focus) {
+    padding: 12px 4px 0 4px;
+    transition: padding-top .2s ease;
+}

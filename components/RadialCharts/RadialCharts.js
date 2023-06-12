@@ -4,59 +4,68 @@ import classNames from 'classnames/bind';
 import styles from './RadialCharts.module.scss';
 import Button from '../Button';
 import { ListIcon } from '../ImagesList';
+import Pie from '../Pie';
 
 const cx = classNames.bind(styles);
 
-const ColumnCharts = () => {
+
+
+const RadialCharts = () => {
     const [state, setState] = useState({});
 
     useEffect(() => {
         setState({
-            month: [
+            customers: [
                 {
                     name: 'Current Customers',
-                    total: 85,                   
+                    percent: 85,   
+                    fill: '#5F27CD'                
                 },
                 {
                     name: 'New Customers',
-                    total: 66,
+                    percent: 66,
+                    fill: '#6C6C6C',
                 },
                 {
                     name: 'Target Customers',
-                    total: 90,
+                    percent: 90,
+                    fill: '#FF8918',
                 },
                 {
                     name: 'Retarget Customers',
-                    total: 30,
+                    percent: 30,
+                    fill: '#FF6F61',
                 },
             ],
         });
     }, [])
 
     return (
-        <Wrapper className={'col l-3 ' + cx('radial__charts')}>
-            <div className={cx('radial__charts__header')}>
-                <div className={cx('radial__charts__title')}>
+        <Wrapper className={cx('radial__chart')}>
+            <div className={cx('radial__chart__header')}>
+                <div className={cx('radial__chart__title')}>
                     <h2>Customers</h2>
                     <p>Information About your Customers</p>
                 </div>
-                <div className={cx('radial__charts__selected')}>
+                <div className={cx('radial__chart__selected')}>
                     <Button 
-                        className={cx('radial__charts__selected-btn')}
+                        className={cx('radial__chart__selected-btn')}
                         svg={<ListIcon />}
                     />
                 </div>
             </div>
-            <div className={cx('radial__charts__container')}>
+            <div className={cx('radial__chart__container')}>
                 {
-                    state.month?.map(month => (
-                        <div className={cx('radial__charts__item')}>
-                            <div className={cx('radial__charts__item__group')}>
-                                { month.total !== 0 ? <div style={{ height: month.total * 4 }} className={cx('radial__charts__item__col-1')}></div> : '' }
-                                { month.quantity !== 0 ? <div style={{ height: month.quantity * 4 }} className={cx('radial__charts__item__col-2')}></div> : '' }
+                    state.customers?.map((customer, i) => (
+                        <div key={i} className={cx('radial__chart__item')}>
+                            <div className={cx('radial__chart__item__group')}>
+                            <Pie 
+                                percentage={customer.percent} 
+                                colour={customer.fill} 
+                            />
                             </div>
-                            <div className={cx('radial__charts__item__label')}>
-                                { month.name }
+                            <div className={cx('radial__chart__item__label')}>
+                                { customer.name }
                             </div>
                         </div>
                     ))
@@ -66,4 +75,4 @@ const ColumnCharts = () => {
     )
 }
 
-export default ColumnCharts;
+export default RadialCharts;

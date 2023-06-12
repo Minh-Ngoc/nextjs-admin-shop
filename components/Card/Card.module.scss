@@ -1,0 +1,24 @@
+.card {
+    background-color: #e1e1e1;
+    padding: 1.5rem 10px;
+    display: flex;
+    gap: 10px;
+    border-radius: 10px;
+    align-items: center;
+    width: max-content;
+
+    .card__image{
+        background-color: transparent;
+    }
+
+    .card__group {
+    
+        .card__title, .card__quantity {
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 16px;
+            letter-spacing: 0.6px;
+            color: #7B7878;
+        }
+    }
+}

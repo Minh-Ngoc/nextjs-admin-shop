@@ -23,9 +23,9 @@ const Header = ({ props }) => {
                 />
 
                 <div className={cx('header__icons')}>
-                    <Images className={cx('header__icon-item')} svg={<MenuIcon />} />
-                    <Images className={cx('header__icon-item', 'notificationIcon')} svg={<NotificationIcon />} />
-                    <Images className={cx('header__icon-item')} src={UserImage} />
+                    <Images alt='ErrorImage' className={cx('header__icon-item')} svg={<MenuIcon />} />
+                    <Images alt='ErrorImage' className={cx('header__icon-item', 'notificationIcon')} svg={<NotificationIcon />} />
+                    <Images alt='ErrorImage' className={cx('header__icon-item')} src={UserImage} />
                 </div>
             </div>
         </Wrapper>

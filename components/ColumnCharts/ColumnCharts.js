@@ -84,7 +84,7 @@ const ColumnCharts = () => {
     }, [])
 
     return (
-        <div className={'col l-9 ' + cx('column__chart')}>
+        <div className={cx('column__chart')}>
             <div className={cx('column__chart__header')}>
                 <div className={cx('column__chart__title')}>
                     <h3>Total Revenue</h3>
@@ -100,8 +100,8 @@ const ColumnCharts = () => {
             </div>
             <div className={cx('column__chart__container')}>
                 {
-                    state.month?.map(month => (
-                        <div className={cx('column__chart__item')}>
+                    state.month?.map((month, i) => (
+                        <div key={i} className={cx('column__chart__item')}>
                             <div className={cx('column__chart__item__group')}>
                                 { month.total !== 0 ? <div style={{ height: month.total * 4 }} className={cx('column__chart__item__col-1')}></div> : '' }
                                 { month.quantity !== 0 ? <div style={{ height: month.quantity * 4 }} className={cx('column__chart__item__col-2')}></div> : '' }

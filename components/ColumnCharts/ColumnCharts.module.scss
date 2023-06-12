@@ -1,7 +1,9 @@
 .column__chart {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: #FFF;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
-    padding-left: 2rem;
+    padding: 1rem;
+    width: calc(70% - 10px);
 
     .column__chart__header {
         display: flex;
@@ -20,7 +22,7 @@
                 font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
                 font-weight: 600;
                 font-size: 36px;
-                line-height: 42px;
+                line-height: 50px;
                 color: #000000;
             }
         }
@@ -34,11 +36,24 @@
                     padding: 10px 0.6rem;
                     width: max-content;
                     background: #FFF8E5;
-                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
                     border-radius: 7px;
 
                     span {
                         color: #6C6C6C;
+                        font-size: 16px;
+                    }
+                }
+                button:hover {
+                    background-color: #fff;
+
+                    span {
+                        color: #FF6F61;
+                    }
+                    svg {
+                        path {
+                            fill: #FF6F61
+                        }
                     }
                 }
             }
@@ -48,7 +63,7 @@
     .column__chart__container {
         display: flex;
         align-items: flex-end;
-        gap: 1.5rem;
+        gap: 1.3rem;
 
         .column__chart__item {
             margin: 1rem 0;
@@ -58,7 +73,7 @@
             }
         }
         .column__chart__item__col-1, .column__chart__item__col-2 {
-            width: 25px;
+            width: 20px;
             border-radius: 13px 13px 0px 0px;
         }
         .column__chart__item__col-1 {
