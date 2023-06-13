@@ -1,0 +1,19 @@
+.inline__chart {
+    margin-right: 1rem;
+
+    .title, .number {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 20px;
+        color: #535353;
+    }
+    .inline__chart__percent {
+        max-width: 290px;
+        height: 8px;
+        border-radius: 4px;
+        margin: 4px 0;
+    }
+    .number {
+        text-align: right;
+    }
+}

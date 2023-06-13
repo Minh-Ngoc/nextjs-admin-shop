@@ -1,0 +1,75 @@
+.radial__chart {
+    background-color: #FFF;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding: 1rem 10px;
+    max-width: 30%;
+
+    .radial__chart__header {
+        display: flex;
+        justify-content: space-between;
+
+        .radial__chart__title{
+    
+            h2 {
+                font-weight: 700;
+                font-size: 30px;
+                line-height: 50px;
+                color: #535353;
+            }
+            p {
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 16px;
+                color: #A7A7A7;
+            }
+        }
+    
+        .radial__chart__selected {
+            .radial__chart__selected-btn {
+                button {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    align-items: center;
+                    padding: 10px 0.6rem;
+                    width: max-content;
+                    background: transparent;
+                    border-radius: 7px;
+
+                    span {
+                        color: #6C6C6C;
+                    }
+                }
+            }
+        }
+    }
+
+    .radial__chart__container {
+        display: flex;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        .radial__chart__item {
+            margin: 1rem 0;
+            flex: 1 1 calc(100% / 2 - 10px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .radial__chart__item__group {
+                display: flex;
+                align-items: flex-end;
+            }
+        }
+        
+        .radial__chart__item__label{
+            margin-top: 1.2rem;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 23px;
+            color: #A7A7A7;
+        }
+    }
+}
