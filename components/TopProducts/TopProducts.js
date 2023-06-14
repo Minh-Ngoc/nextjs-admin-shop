@@ -41,7 +41,7 @@ function TopProducts() {
             <h1>Top Products</h1>
             {
                 ProductsItem.map(product => (
-                    <div className={cx('top__product__item')}>
+                    <div className={cx('top__product__item')} key={product.id}>
                         <Card 
                             className={cx('item__name')}
                             src={product.image} 
