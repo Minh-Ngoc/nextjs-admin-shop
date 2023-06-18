@@ -12,8 +12,8 @@ const Card = ({ className, title, icon, src, quantity, ...props }) => {
             { icon }
             { src && <Images className={cx('card__image')} src={src} alt='ErrorImage' /> }
             <div className={cx('card__group')}>
-                <p className={cx('card__title')}> {title} </p>
-                <p className={cx('card__quantity')}> {quantity} </p>
+                <span className={cx('card__title')}> {title} </span>
+                <span className={cx('card__quantity')}> {quantity} </span>
             </div>
         </Wrapper>
      );
