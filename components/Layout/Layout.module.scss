@@ -25,7 +25,13 @@
 }
 @media (max-width: 870px) {
     .layout__main {
-        max-width: 86% !important;
-        margin-left: 18% !important;
+        max-width: 88%!important;
+        margin-left: 12%!important;
+    }
+}
+@media (min-width: 375px) and (max-width: 485px) {
+    .layout__main {
+        max-width: 83%!important;
+        margin-left: 20%!important;
     }
 }
