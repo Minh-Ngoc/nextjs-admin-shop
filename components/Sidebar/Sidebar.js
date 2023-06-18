@@ -4,7 +4,7 @@ import styles from './Sidebar.module.scss';
 import Images from "../Images";
 import Button from "../Button";
 import {
-    Dashboard, Products, Customers, Orders, Shipments, Transactions, Settings, Logout,
+    Logo, Dashboard, Products, Customers, Orders, Shipments, Transactions, Settings, Logout,
 } from '../ImagesList';
 import { useState } from "react";
 
@@ -49,7 +49,8 @@ const Sidebar = ({ props }) => {
 
     return (
         <Wrapper className={'col l-3 ' + cx('sidebar')}>
-            <Images className={cx('sidebar__logo')} content='Lisa Admin' />
+            <Images className={cx('sidebar__logo', 'sidebar__header')} content='Lisa Admin' />
+            <Images className={cx('sidebar__home', 'sidebar__header')} svg={<Logo />} />
             <div className={cx('sidebar__container')}>
                 {
                     sidebarsItem.map(item => ( 

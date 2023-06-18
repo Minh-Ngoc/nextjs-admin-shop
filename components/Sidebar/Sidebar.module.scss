@@ -7,12 +7,17 @@
     left: 0;
     bottom: 0;
     
+    .sidebar__header {
+      margin: 2rem calc(0.5rem + 0.9rem);
+    }
     .sidebar__logo {
         font-weight: 600;
-        font-size: 30px;
-        margin: 2rem calc(0.5rem + 0.9rem);
+        font-size: 28px;
         line-height: 40px;
         color: #1E2832;
+    }
+    .sidebar__home {
+      display: none;
     }
 
     .sidebar__container {
@@ -23,6 +28,9 @@
             }
         }
         .btn {
+            button {
+              padding: 0.5rem 1em .5em .9em;
+            }
             button span {
                 display: block;
                 font-weight: 500;
@@ -79,13 +87,93 @@
                 svg {
                     path {
                         fill: var(--active);
+                        // transition: fill .5s linear;
                     }
                 }
                 span {
                     color: var(--active);
                     font-weight: 600;
+                    // transition: color .5s linear, font-weight .5s linear;
                 }
             }
         }
     }
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+  .sidebar {
+
+    .sidebar__logo {
+        font-size: 26px;
+        margin: 1rem 0.9rem;
+    }
+
+    .sidebar__container {
+        margin: 0 0.5rem 2rem 0.5rem;
+
+        .btn {
+            button {
+              padding: 0.5rem 0.1rem;
+            }
+        }
+    }
+  } 
+}
+@media (max-width: 870px) {
+  .sidebar {
+    width: max-content;
+
+    .sidebar__header {
+      margin: 2rem 0;
+    }
+    .sidebar__logo{
+      display: none;
+    }
+    .sidebar__home {
+      display: flex !important;
+      justify-content: flex-start;
+      padding-left: 0.9rem;
+      cursor: pointer;
+    }
+    .sidebar__container {
+      .btn {
+          button {
+            padding: 0.5rem;
+            
+            span {
+                display: none !important;
+                opacity: 0;
+                margin-left: -100% !important;
+            }
+          }
+          button:hover svg {
+            transform: translateX(0) rotate(90deg) scale(1.1) !important;
+          }
+      }
+      .btn:hover {
+        button {
+          span {
+              display: block !important;
+              opacity: 1;
+              margin-left: 0 !important;
+              animation: showText .5s linear;
+          }
+          @keyframes showText {
+            0% {
+              opacity: 0;
+              margin-left: -100% !important;
+            }
+            100% {
+              opacity: 1;
+              margin-left: 0 !important;
+            }
+          }
+        }
+      }
+      button:hover span {
+        transform: translateX(0) !important;
+      }
+          
+    }
+  }
 }

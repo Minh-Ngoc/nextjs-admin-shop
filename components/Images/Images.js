@@ -5,9 +5,9 @@ import Image from "next/image";
 
 const cx = classNames.bind(styles);
 
-const Images = ({ src, alt, width, height, className, svg, content }) => {
+const Images = ({ src, alt, width, height, className, svg, content, ...props }) => {
     return (
-        <Wrapper className={cx(className, 'images')}>
+        <Wrapper className={cx(className, 'images')} {...props}>
             {
                 src ? (
                     <Image 

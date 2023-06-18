@@ -10,7 +10,6 @@
         justify-content: space-between;
 
         .column__chart__title{
-            margin-left: 2rem;
     
             h3 {
                 font-weight: 600;
@@ -62,6 +61,7 @@
 
     .column__chart__container {
         display: flex;
+        justify-content: space-between;
         align-items: flex-end;
         gap: 1rem;
 
@@ -88,6 +88,53 @@
             font-size: 20px;
             line-height: 23px;
             color: #A7A7A7;
+        }
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .column__chart {
+        width: 100%;
+    
+        .column__chart__container {
+            gap: 1rem;
+            box-sizing: border-box;
+            overflow: auto;
+        }
+    }
+}
+@media (min-width: 375px) and (max-width: 485px) {
+    .column__chart {
+        .column__chart__header {
+            
+            .column__chart__title {
+                h3 {
+                    font-size: 18px;
+                    line-height: 20px;
+                }
+                h2 {
+                    font-size: 24px;
+                    line-height: 30px;
+                }
+            }
+            .column__chart__selected {
+                .column__chart__selected-btn {
+                    button {
+                        padding: 6px 0.4rem;
+    
+                        span {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+        .column__chart__container {
+            .column__chart__item__label{
+                margin-top: 1rem;
+                font-weight: 500;
+                font-size: 14px;
+            }
         }
     }
 }

@@ -73,3 +73,37 @@
         }
     }
 }
+
+@media screen and (max-width: 1300px) {
+    .radial__chart {
+        max-width: 100%;
+    
+        .radial__chart__container {
+            display: flex;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            gap: 10px;
+    
+            .radial__chart__item {
+                flex: 1 1 calc(100% / 2 - 10px);
+            }
+        }
+    }
+}
+@media (min-width: 375px) and (max-width: 485px) {
+    .radial__chart {
+    
+        .radial__chart__header {
+    
+            .radial__chart__title {
+        
+                h2 {
+                    font-weight: 700;
+                    font-size: 24px;
+                    line-height: 50px;
+                    color: #535353;
+                }
+            }
+        }
+    }
+}
