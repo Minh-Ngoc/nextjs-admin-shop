@@ -109,7 +109,16 @@
 }
 
 @media (min-width: 375px) and (max-width: 485px) {
-    
+    .cards {
+
+        .card__item {
+            max-width: 100%;
+            width: 100%;
+            padding-left: 20%;
+            gap: 1rem;
+            justify-content: flex-start;
+        }
+    }
     .stats__overview {
     
         .stats__overview__header {
