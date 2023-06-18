@@ -11,8 +11,9 @@
     max-width: calc(100% / 4 - 6px);
     float: none !important;
     width: 100% !important;
-    margin: 0;
-    box-sizing:border-box;
+    position:relative;
+    -webkit-transform:translate(0px,0px);
+    transform:translate(0px,0px);
 
     svg {
         min-width: max-content;
