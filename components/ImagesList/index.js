@@ -1,3 +1,4 @@
+import Logo from '@/assets/images/home.svg';
 import Dashboard from '@/assets/images/dashboard.svg';
 import Products from '@/assets/images/products.svg';
 import Customers from '@/assets/images/customers.svg';
@@ -9,6 +10,8 @@ import Logout from '@/assets/images/logout.svg';
 import SearchIcon from '@/assets/images/search.svg';
 import NotificationIcon from '@/assets/images/notification.svg';
 import MenuIcon from '@/assets/images/menu.svg';
+import Menu from '@/assets/images/menu-header.svg';
+import Close from '@/assets/images/close.svg';
 import UserImage from '@/assets/images/user.png';
 import MoreIcon from '@/assets/images/more-icon.svg';
 import ListIcon from '@/assets/images/list-icon.svg';
@@ -20,6 +23,7 @@ import TopProduct1 from '@/assets/images/product1.png';
 import TopProduct2 from '@/assets/images/product2.png';
 
 export {
+    Logo,
     Dashboard,
     Products,
     Customers,
@@ -40,4 +44,6 @@ export {
     OrdersCompleted,
     TopProduct1,
     TopProduct2,
+    Menu,
+    Close
 }

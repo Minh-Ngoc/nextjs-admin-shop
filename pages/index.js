@@ -71,7 +71,13 @@ const Home = () => {
           <div className={cx('cards')}>
             {
               cardsItem.map((card, i) => (
-                <Card key={i} icon={card.icon} title={card.title} quantity={card.quantity} />
+                <Card 
+                  className={cx('card__item')}
+                  key={i} 
+                  icon={card.icon} 
+                  title={card.title} 
+                  quantity={card.quantity} 
+                />
               ))
             }
           </div>

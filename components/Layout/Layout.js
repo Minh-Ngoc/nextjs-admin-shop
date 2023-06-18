@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
     return (
         <Wrapper className={cx('layout')}>
             <div className={'grid wide ' + cx('layout__container')}>
-                <div className='row'>
+                <div className={'row'}>
                     <Sidebar />
                     <div className={'col l-9 l-o-3 ' + cx('layout__main')}>
                         <Header />

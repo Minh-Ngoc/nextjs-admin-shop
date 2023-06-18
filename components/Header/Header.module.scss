@@ -17,6 +17,11 @@
             color: #535353;
         }
         .header__search {
+            width: 40%;
+
+            input {
+                width: 100%;
+            }
 
             input label {
                 font-weight: 400;
@@ -52,11 +57,109 @@
                 content: '';
                 width: 6px;
                 height: 6px;
-               top: 26%;
+                top: 26%;
                 right: 8%;
                 background: #ff8918;
                 border-radius: 50%;
                 border: 1px solid #585858;
+            }
+        }
+        .header__menu {
+            display: none;
+            cursor: pointer;
+        }
+        .header__menu:hover {
+            path {
+                fill: #ff8918;
+            }
+        }
+    }
+    .header__overlay {
+        position: fixed;
+        z-index: 999;
+        background-color: rgba(0, 0, 0, 0.25);
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        animation: showOverlay .8s ease;
+
+        @keyframes showOverlay {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .header__menu__container {
+            background-color: #FFF;
+            width: 30%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+            animation: showMenu .5s ease;
+
+            @keyframes showMenu {
+                from {
+                    right: -100%;
+                    opacity: 0;
+                }
+                to {
+                    right: 0;
+                    opacity: 1;
+                }
+            }
+
+            li {
+                list-style: none;
+                cursor: pointer;
+
+                + li {
+                    margin-top: 2rem;
+                }
+                .header__menu-item {
+                    justify-content: center;
+                }
+                .close path {
+                    fill: red
+                }
+            }
+            li:hover {
+                path {
+                    fill: #ff8918
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+    .header__search {
+        display: none;
+    }
+}
+@media (max-width: 739px) {
+    .header__icons {
+        display: none !important;
+    }
+    .header__menu {
+        display: block !important;
+    }   
+}
+@media (min-width: 375px) and (max-width: 485px) {
+    .header {
+        padding: 10px 1rem;
+    
+        .header__container {
+            h1 {
+                font-size: 30px;
+                line-height: 40px;
             }
         }
     }
