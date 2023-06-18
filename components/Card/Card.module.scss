@@ -19,7 +19,9 @@
     }
 
     .card__group {
-    
+        display: flex;
+        flex-direction: column;
+        
         .card__title, .card__quantity {
             font-weight: 600;
             font-size: 12px;
