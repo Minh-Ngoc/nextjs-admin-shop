@@ -121,7 +121,7 @@
 }
 @media (max-width: 870px) {
   .sidebar {
-    width: 10%;
+    width: max-content;
 
     .sidebar__header {
       margin: 2rem 0;
@@ -176,9 +176,4 @@
           
     }
   }
-}
-@media (min-width: 375px) and (max-width: 485px) {
-    .sidebar {
-        width: 18%;
-    }
 }
